@@ -23,7 +23,7 @@ In this tutorial, you will:
 * Explore core components and command-line tools.
 * Understand the ROS 2 ecosystem and package structure.
 * Create your first ROS 2 workspace and package.
-* **Exercise 1**: Follow the instruction in [Setup](https://sir.upc.edu/projects/ros2tutorials/appendices/setup/index.html#setupappendix-label) in order to set up your git repository to implement the solution of the proposed exercises.
+* Complete [**Exercise 1**](https://sir.upc.edu/projects/ros2tutorials/1-ROS_basic_concepts_and_development_tools/index.html#exercise-1) to set up your git repository.
 
 ### Tutorial 2: Communications using topics
 
@@ -34,7 +34,7 @@ This tutorial focuses on ROS 2 topics:
 * Work with standard, common, and custom message types.
 * Record and play back data with **rosbag**.
 * Configure Quality of Service (QoS) settings and executors.
-* Complete **Exercise 2** to solidify your understanding.
+* Complete [**Exercise 2**](https://sir.upc.edu/projects/ros2tutorials/2-communications_using_topics/index.html#exercise-2) to solidify your understanding.
 
 ### Tutorial 3: Tools
 
@@ -44,7 +44,7 @@ Learn about the essential ROS 2 development utilities:
 * Manage node parameters dynamically.
 * Model robots with URDF and work with the `tf2` library.
 * Visualize robot state in RViz.
-* Complete **Exercise 3a** and **3b** to apply these tools in practice.
+* Complete [**Exercise 3a**](https://sir.upc.edu/projects/ros2tutorials/3-tools/index.html#exercise-3a) and [**3b**](https://sir.upc.edu/projects/ros2tutorials/3-tools/index.html#exercise-3b) to apply these tools in practice.
 
 ### Tutorial 4: Communications using services
 
@@ -53,7 +53,7 @@ Understand request/reply patterns in ROS 2:
 * Explore ROS 2 service communication features and interfaces.
 * Implement a service server and client in C++.
 * Handle callbacks and callback groups for concurrency.
-* Complete **Exercise 4** to build a simple service-based interaction.
+* Complete [**Exercise 4**](https://sir.upc.edu/projects/ros2tutorials/4-communications_using_services/index.html#exercise-4) to build a simple service-based interaction.
 
 ### Tutorial 5: Simulation
 
@@ -61,7 +61,7 @@ Discover how to simulate robots with Gazebo:
 
 * Learn Gazebo basics and integration with ROS 2.
 * Use camera images and the ArUco library for pose estimation.
-* Complete **Exercise 5** to simulate a camera-driven detection pipeline.
+* Complete [**Exercise 5**](https://sir.upc.edu/projects/ros2tutorials/5-simulation/index.html#exercise-5) to simulate a camera-driven detection pipeline.
 
 ### Tutorial 6: Communications using actions
 
@@ -82,7 +82,7 @@ Implement hardware abstraction and control frameworks:
 
 ### Final Work: Integration and Evaluation
 
-The final assignment brings together all course topics:
+[The final assignment](https://sir.upc.edu/projects/ros2tutorials/final_work/index.html) brings together all course topics:
 
 * Define project motivation and objectives.
 * Set up the development environment and provided packages.
