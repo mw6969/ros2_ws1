@@ -12,5 +12,6 @@ Demos that open rviz and the joint state publisher for a simple pan-and-tilt str
 ```
 $ ros2 launch urdf_tutorial pantilt_visualization.launch.py
 $ ros2 launch urdf_tutorial ur_visualization.launch.py
+$ ros2 launch urdf_tutorial rviz11_marker_demo.launch.py
 ```
 
