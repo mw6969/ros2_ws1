@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="camera1">
+      <link name="camera_link">
+        <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.000166667</ixx>
+            <iyy>0.000166667</iyy>
+            <izz>0.000166667</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+        <!--The camera sensor frame is not the same as the link frame (although there is no explicit transform), that is, there is an internal transform between the link and the camera's optical frame that follows the ROS camera optical frame convention, i.e., to align from a typical camera_link (Z up, X forward) to camera_link_optical (Z forward, X right, Y down) <pose>0 0 0 -1.5708 0 -1.5708</pose> -->
+        <sensor type="camera" name="camera1_sensor">
+          <gz_frame_id>camera_link_optical</gz_frame_id>
+          <camera>
+            <horizontal_fov>1.047</horizontal_fov>
+            <image>
+              <width>1920</width>
+              <height>1080</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+          <visualize>true</visualize>
+        </sensor>
+      </link>
+      <!--plugin filename="libignition-gazebo-pose-publisher-system.so" name="ignition::gazebo::systems::PosePublisher">
+          <publish_model_pose>true</publish_model_pose>
+          <publish_link_pose>true</publish_link_pose> 
+          <publish_sensor_pose>false</publish_sensor_pose>
+          <use_world_frame>true</use_world_frame>
+          <update_frequency>1</update_frequency>
+      </plugin-->
+    </model>
+</sdf>

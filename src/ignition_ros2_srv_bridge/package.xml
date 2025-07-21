@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>ignition_ros2_srv_bridge</name>
+  <version>0.1.0</version>
+  <description>ROS 2 node to bridge SpawnEntity requests to Gazebo Fortress using Ignition Transport</description>
+
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>ros_gz_interfaces</depend>
+  <depend>ignition-transport11</depend>
+  <depend>protobuf</depend>
+
+  <exec_depend>ament_index_cpp</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

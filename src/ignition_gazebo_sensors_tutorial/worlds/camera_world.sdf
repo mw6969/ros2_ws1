@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="camera_world">
+
+    <!-- world plugin to get info from the models-->
+    <physics name="1ms" type="ignored"> <max_step_size>0.001</max_step_size> <real_time_factor>1.0</real_time_factor></physics>
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"></plugin>
+    <plugin filename="ignition-gazebo-sensors-system" name="gz::sim::systems::Sensors"><render_engine>ogre2</render_engine></plugin>
+    <plugin filename="ignition-gazebo-user-commands-system" name="gz::sim::systems::UserCommands"></plugin>
+    <plugin filename="ignition-gazebo-physics-system" name="gz::sim::systems::Physics"> </plugin>
+    <plugin name='ignition::gazebo::systems::Contact' filename='ignition-gazebo-contact-system' />
+    
+    <!-- A global light source -->
+    <include>
+      <uri>
+        https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/sun
+      </uri>
+    </include>  
+
+    <!-- A ground plane -->
+    <include>
+      <uri>
+        https://fuel.ignitionrobotics.org/1.0/OpenRobotics/models/Ground%20Plane
+      </uri>
+    </include>
+
+    <!-- camera view -->
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>0.556 -0.9132 0.8266 0 0.59 2.15</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    
+    <!-- camera model -->
+    <include>
+      <static>true</static>
+      <pose>-0.35 0 0.54 0 1.04719551 0</pose>
+      <uri>
+        model://camera-plugin
+      </uri>
+    </include>
+
+    <!-- chessboard model -->
+    <include>
+      <static>true</static>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>
+        model://flat_chessboard
+      </uri>
+    </include>
+
+    <!-- kingW model -->
+    <include>
+      <static>0</static>
+      <pose>0.125 0.125 0.04 0 0 0</pose>
+      <uri>
+        model://kingW
+      </uri>
+    </include>
+    
+  </world>
+</sdf>

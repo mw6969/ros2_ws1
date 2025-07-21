@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+    <!-- We use a custom world for the rrbot so that the camera angle is launched correctly -->
+    <world name="rrbot_world">
+     
+    <!-- world plugin to get info from the models-->
+    <physics name="1ms" type="ignored"> <max_step_size>0.001</max_step_size> <real_time_factor>1.0</real_time_factor></physics>
+    <plugin filename="ignition-gazebo-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"></plugin>
+    <plugin filename="ignition-gazebo-sensors-system" name="gz::sim::systems::Sensors"><render_engine>ogre2</render_engine></plugin>
+    <plugin filename="ignition-gazebo-user-commands-system" name="gz::sim::systems::UserCommands"></plugin>
+    <plugin filename="ignition-gazebo-physics-system" name="gz::sim::systems::Physics"> </plugin>
+    <plugin name='ignition::gazebo::systems::Contact' filename='ignition-gazebo-contact-system' />
+
+    <!-- A global light source -->
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/sun
+      </uri>
+    </include>  
+
+    <!-- A ground plane -->
+    <include>
+      <uri>
+        https://fuel.gazebosim.org/1.0/OpenRobotics/models/Ground%20Plane
+      </uri>
+    </include>
+
+      <!-- block -->
+      <include>
+        <uri>model://myblock</uri>
+        <pose>-2 0 0 0 0 0</pose>
+      </include>
+
+      <!-- white pieces -->
+      <!-- include>
+        <uri>model://pawnW1</uri>
+        <pose>-0.125 -0.175 0.0201 0 0 0</pose>
+      </include-->
+
+      <!-- Focus camera on tall pendulum -->
+      <gui fullscreen='0'>
+        <camera name='user_camera'>
+          <pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
+          <view_controller>orbit</view_controller>
+        </camera>
+      </gui>
+      
+    </world>
+</sdf>
