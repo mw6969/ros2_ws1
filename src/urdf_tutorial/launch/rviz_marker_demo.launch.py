@@ -102,13 +102,30 @@ def launch_setup(context, *args, **kwargs):
         ],
     )
 
+    grasp_broadcaster_node = Node(
+        package='urdf_tutorial',
+        executable='custom_grasps_tf2_broadcaster',
+        name='custom_grasp_broadcaster',
+        output='screen',
+    )
+
+    # kinenikros2 IK-server
+    ik_server_node = Node(
+        package='kinenikros2',
+        executable='kinenik_srv_server',
+        name='kinenik_server',
+        output='screen',
+    )
+
     return [
         robot_offset_broadcaster,
         world_broadcaster,
         marker_publisher,
         grasp_11_broadcaster,
+        grasp_broadcaster_node,
         robot_state_publisher,
         joint_state_gui,
+        ik_server_node,
         rviz,
     ]
 

@@ -8,15 +8,19 @@
   <license>Apache License, Version 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
-
-  <depend>rclcpp</depend>
-  <depend>std_msgs</depend>
   <depend>ur_description</depend>
   <depend>visualization_msgs</depend>
-  <depend>geometry_msgs</depend>
-
+  <build_depend>rclcpp</build_depend>
   <build_depend>tf2_ros</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>urdf_tutorial_interfaces</build_depend>
+  <build_depend>kinenikros2</build_depend>
+
+  <exec_depend>rclcpp</exec_depend>
   <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>urdf_tutorial_interfaces</exec_depend>
+  <exec_depend>kinenikros2</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>

@@ -1,0 +1,4 @@
+int32 object_id
+geometry_msgs/TransformStamped object_grasp_transform
+---
+bool ret
